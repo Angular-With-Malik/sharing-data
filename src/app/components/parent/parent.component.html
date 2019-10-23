@@ -1,0 +1,22 @@
+<p>
+  parent works!
+</p>
+
+{{msgFromChild}}
+<hr>
+
+{{msgFromChildUsingOutput}}
+<hr>
+
+<hr>
+{{msgFromService}}
+
+
+<hr>
+<button class="btn btn-danger" (click)="changeMsg()">Change Service MSG</button>
+
+<hr>
+<br>
+<div class="border border-danger m-4 p-4 col-md-5">
+  <app-child [MSG]="msg" (msgEvent)="getMsgFromChild($event)"></app-child>
+</div>
